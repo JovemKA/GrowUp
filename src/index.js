@@ -1,7 +1,7 @@
 (async () => {
 
     const database = require('./db');
-    const Perfil = require('./models/perfil');
+    const Usuário = require('./Repositorio/usuario');
     await database.sync();
 })();
 
