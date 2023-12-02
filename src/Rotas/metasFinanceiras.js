@@ -1,11 +1,11 @@
 const {Router} = require("express")
-const {getMetasFinanceiras,postMetaFinanceira, getMetaFinanceira, patchMetaFinanceira, deleteMetaFinanceira} = require("../Controladores/metasFinanceiras")
+const {getMetasFinanceiras,postMetaFinanceira, getMetaFinanceira, putMetaFinanceira, deleteMetaFinanceira} = require("../Controladores/metasFinanceiras")
 const router = Router()
 
 router.get('/', getMetasFinanceiras)
 router.get('/:id', getMetaFinanceira)
 router.post('/', postMetaFinanceira)
-router.patch('/:id', patchMetaFinanceira)
+router.put('/:id', putMetaFinanceira)
 router.delete('/:id', deleteMetaFinanceira)
 
 

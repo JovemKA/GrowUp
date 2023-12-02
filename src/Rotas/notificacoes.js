@@ -1,11 +1,11 @@
 const {Router} = require("express")
-const {getNotificacao,postNotificacao, getNotificacao, patchNotificacao, deleteNotificacao} = require("../Controladores/notificacoes")
+const {getNotificacao,postNotificacao, getNotificacao, putNotificacao, deleteNotificacao} = require("../Controladores/notificacoes")
 const router = Router()
 
 router.get('/', getNotificacoes)
 router.get('/:id', getNotificacao)
 router.post('/', postNotificacao)
-router.patch('/:id', patchNotificacao)
+router.put('/:id', putNotificacao)
 router.delete('/:id', deleteNotificacao)
 
 
