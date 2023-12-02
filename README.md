@@ -3,6 +3,8 @@
 Este repositário utiliza as dependências Express e Sequelize.
 
 # 1º Passo - Iniciar NPM
+É necessário criar um banco de dados para poder ser realizada a auntenticação com o sequelize.
+
 Acesse o terminal e execute o seguinte comando para iniciar o NPM e suas depedências.
 
 NPM  init
