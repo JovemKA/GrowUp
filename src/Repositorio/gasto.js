@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../db');
-const Usuário = require('./usuario');
+const Usuario = require('./usuario');
 
 const Gasto = database.define('gasto', {
     idGasto: {
@@ -25,19 +25,18 @@ const Gasto = database.define('gasto', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    urlRecibo: Sequelize.STRING,
     dataRegistro: {
         type: Sequelize.DATEONLY,
         allowNull: false
     }
 })
 
-Gasto.belongsTo(Usuário, {
+Gasto.belongsTo(Usuario, {
     constraint: true,
     foreignKey: 'idUsuario'
 })
 
-Usuário.hasMany(Gasto, {
+Usuario.hasMany(Gasto, {
     foreignKey: 'idUsuario'
 })
 

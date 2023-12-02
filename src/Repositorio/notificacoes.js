@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 const database = require("../db");
-const Usuário = require('./usuario');
+const Usuario = require('./usuario');
 
-const Notificações = database.define('notificacoes', {
+const Notificacoes = database.define('notificacoes', {
     idNotificacoes: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -23,13 +23,13 @@ const Notificações = database.define('notificacoes', {
     }
 })
 
-Notificações.belongsTo(Usuário, {
+Notificacoes.belongsTo(Usuario, {
     constraint: true,
     foreignKey: 'idUsuario'
 })
 
-Usuário.hasMany(Notificações, {
+Usuario.hasMany(Notificacoes, {
     foreignKey: 'idUsuario'
 })
 
-module.exports = Notificações;
+module.exports = Notificacoes;
