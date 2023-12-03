@@ -1,5 +1,5 @@
 const {Router} = require("express")
-const {getNotificacao,postNotificacao, getNotificacao, putNotificacao, deleteNotificacao} = require("../Controladores/notificacoes")
+const {getNotificacao,postNotificacao, getNotificacoes, putNotificacao, deleteNotificacao} = require("../Controladores/notificacoes")
 const router = Router()
 
 router.get('/', getNotificacoes)

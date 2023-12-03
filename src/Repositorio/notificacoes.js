@@ -3,7 +3,7 @@ const database = require("../db");
 const Usuario = require('./usuario');
 
 const Notificacoes = database.define('notificacoes', {
-    idNotificacoes: {
+    id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,

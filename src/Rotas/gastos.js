@@ -1,12 +1,12 @@
 const {Router} = require("express")
-const {getGastos,postGastos, getGastos, putGastos, deleteGastos} = require("../Controladores/gastos")
+const {getGasto, postGasto, getGastos, putGasto, deleteGasto} = require("../Controladores/gastos")
 const router = Router()
 
 router.get('/', getGastos)
-router.get('/:id', getGastos)
-router.post('/', postGastos)
-router.put('/:id', putGastos)
-router.delete('/:id', deleteGastos)
+router.get('/:id', getGasto)
+router.post('/', postGasto)
+router.put('/:id', putGasto)
+router.delete('/:id', deleteGasto)
 
 
 module.exports = router

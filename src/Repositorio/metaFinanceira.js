@@ -3,7 +3,7 @@ const database = require('../db');
 const Usuário = require('./usuario');
 
 const MetaFinanceira = database.require('metaFinanceira', {
-    idMetaFinanceira: {
+    id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,

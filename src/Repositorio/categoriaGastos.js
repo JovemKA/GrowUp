@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const database = require("../db");
 
 const categoriaGastos = database.define("categoriaGastos", {
-    idCategoriaGastos: {
+    id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
